@@ -40,7 +40,7 @@ Copy and paste the script below:
 ```groovy
 import javaposse.jobdsl.plugin.*
 node {
-    git branch: "master", credentialsId: "cs-ws-s-jen-ziplback-key" ,url: "ssh://git@github.com:tpeltone/ci-seedjob.git"
+    git branch: "master", credentialsId: "my-key" ,url: "ssh://git@github.com:tpeltone/ci-seedjob.git"
     step([
         $class: 'ExecuteDslScripts',
         targets: "jobs/*.groovy",
